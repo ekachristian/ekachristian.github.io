@@ -9,7 +9,7 @@
     <meta property="og:url" content="https://ekachristian.github.io/">
     <meta property="og:title" content="Christian Eka Wibisono | Professional Portfolio">
     <meta property="og:description" content="Portfolio of Christian Eka Wibisono. Specializing in Web Development, AI Automation, Data Science, and Enterprise Media Systems.">
-    <meta property="og:image" content="images/profile.png">
+    <meta property="og:image" content="images/profile.jpg">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -126,64 +126,42 @@
         .section { padding: 80px 0; border-top: 1px solid var(--border); }
         .section-title { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 40px; }
         
-        /* PROJECTS FULL SHOWCASE (Presisi Tinggi Tanpa Space Kosong) */
-        .showcase-container { display: flex; flex-direction: column; gap: 48px; }
+        /* PROJECTS TEXT-CENTRIC LAYOUT (No Images - Sempurna & Rapi) */
+        .showcase-container { display: flex; flex-direction: column; gap: 32px; }
         .showcase-item { 
             background-color: var(--bg-card); 
             border: 1px solid var(--border); 
-            border-radius: 24px; 
-            padding: 32px; 
-            display: grid; 
-            grid-template-columns: 1.1fr 1fr; 
-            gap: 40px; 
-            align-items: stretch; /* Meregangkan container agar tinggi kiri & kanan sama rata */
+            border-radius: 20px; 
+            padding: 40px; 
+            display: block; /* Menghapus grid kolom gambar agar teks memenuhi area secara simetris */
         }
         
-        /* New Asymmetric Mosaic Project Gallery Grid */
-        .project-mosaic-gallery { 
-            display: grid; 
-            grid-template-columns: repeat(2, 1fr); 
-            grid-template-rows: repeat(2, 1fr);
-            gap: 8px; 
-            height: 100%;
-            min-height: 480px; /* Memastikan ruang galeri besar dan kokoh */
-        }
-        .project-mosaic-gallery img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            cursor: zoom-in;
-        }
-        .project-mosaic-gallery img:hover {
-            border-color: var(--primary);
-        }
-        /* Membuat gambar pertama menjadi visual utama yang memakan 2 baris vertikal */
-        .img-featured-tile {
-            grid-row: span 2;
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 16px;
         }
 
-        .project-details {
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Menjaga teks tetap rapi di tengah kolomnya */
-        }
-        .project-details h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 12px; color: var(--text-main); }
-        .project-description { color: var(--text-muted); font-size: 1rem; margin-bottom: 24px; }
+        .project-header h3 { font-size: 1.7rem; font-weight: 700; color: var(--text-main); }
+        .project-description { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px; max-width: 900px; }
         
         .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
         .tag { font-size: 0.75rem; background-color: var(--bg-main); border: 1px solid var(--border); padding: 4px 10px; border-radius: 4px; color: var(--text-muted); font-weight: 500; }
 
         /* UX CASE STUDY PROCESS BLOCKS */
-        .case-study-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
-        .case-box { background-color: var(--bg-main); border-left: 4px solid var(--primary); padding: 14px; border-radius: 0 12px 12px 0; border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .case-study-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px; }
+        .case-box { background-color: var(--bg-main); border-left: 4px solid var(--primary); padding: 20px; border-radius: 0 12px 12px 0; border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
         .case-box.problem { border-left-color: #ef4444; }
         .case-box.impact { border-left-color: #10b981; }
-        .case-box h4 { font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .case-box p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; }
+        .case-box h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .case-box p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
 
-        /* TECHNICAL SKILLS MATRIX (2 CATEGORIES: IT & MEDIA) */
+        /* TECHNICAL SKILLS MATRIX */
         .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
         .skills-category { background-color: var(--bg-card); border: 1px solid var(--border); padding: 32px; border-radius: 16px; }
         .skills-category h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; color: var(--primary); display: flex; align-items: center; gap: 10px; }
@@ -201,7 +179,7 @@
         .cred-item p { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
         .cred-item span { display: block; font-size: 0.8rem; color: var(--primary); font-weight: 500; margin-top: 6px; }
 
-        /* EXPERIENCES TIMELINE (6 core tracks) */
+        /* EXPERIENCES TIMELINE */
         .timeline-container { display: flex; flex-direction: column; gap: 24px; }
         .timeline-row { display: grid; grid-template-columns: 220px 1fr; padding: 24px 0; border-bottom: 1px solid var(--border); }
         .timeline-row:last-child { border-bottom: none; }
@@ -211,11 +189,6 @@
         .timeline-body ul { padding-left: 18px; color: var(--text-muted); font-size: 0.95rem; }
         .timeline-body li { margin-bottom: 6px; }
 
-        /* CONVERSION CONTACT WRAPPER */
-        .contact-box { background-color: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 48px; text-align: center; max-width: 700px; margin: 0 auto; }
-        .contact-box h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 16px; }
-        .contact-box p { color: var(--text-muted); margin-bottom: 32px; }
-        
         /* INFORMATIVE MULTI-COLUMN FOOTER */
         footer { background-color: var(--bg-card); border-top: 1px solid var(--border); padding: 60px 0 30px 0; margin-top: 80px; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
@@ -239,15 +212,13 @@
         .btn-wa:hover { background-color: #20ba5a; }
         .btn-top { background-color: var(--bg-card); color: var(--text-main); border: 1px solid var(--border); display: none; }
 
-        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.9); z-index: 3000; display: none; justify-content: center; align-items: center; padding: 24px; }
-        .lightbox img { max-width: 100%; max-height: 85vh; border-radius: 8px; }
-
         /* MOBILE RESPONSIVENESS MATRIX */
         @media (max-width: 868px) {
-            .hero-grid, .showcase-item, .project-mosaic-gallery, .timeline-row, .skills-grid, .skills-list, .credentials-grid, .case-study-grid, .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .hero-grid, .timeline-row, .skills-grid, .skills-list, .credentials-grid, .case-study-grid, .footer-grid { grid-template-columns: 1fr; gap: 32px; }
             .hero-grid { display: flex; flex-direction: column-reverse; text-align: center; padding: 40px 0; }
             .hero-text h1 { font-size: 2.3rem; }
             .nav-menu { display: none; }
+            .project-header { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -255,7 +226,7 @@
 
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#home" class="logo">Christian<span> Eka</span></a>
+            <a href="#home" class="logo">Christian<span>.Dev</span></a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -283,11 +254,11 @@
                 <div class="status-badge">
                     <span class="status-dot"></span> Available for Global Work
                 </div>
-                <img src="images/profile.png" alt="Christian Eka Wibisono" class="profile-img">
+                <img src="images/profile.jpg" alt="Christian Eka Wibisono" class="profile-img" onerror="this.src='https://via.placeholder.com/300x280'">
                 <ul class="profile-info-list">
                     <li><i class="fa-solid fa-location-dot"></i> Central Java, Indonesia</li>
-                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:ekachristian01@gmail.com">ekachristian01@gmail.com</a></li>
-                    <li><i class="fa-solid fa-phone"></i> <a href="https://wa.me/6283824076123?text=Hello%20Christian,%20I%20reviewed%20your%20portfolio%20and%20would%20love%20to%20discuss%20an%20upcoming%20project.">+62 838-2407-6123</a></li>
+                    <li><i class="fa-solid fa-envelope"></i> ekachristian01@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +62 838-2407-6123</li>
                 </ul>
             </div>
         </section>
@@ -297,74 +268,64 @@
             <div class="showcase-container">
 
                 <div class="showcase-item">
-                    <div class="project-mosaic-gallery">
-                        <img src="images/project-ai-coaching-main.jpg" class="img-featured-tile" alt="AI Coaching Module - Primary Dashboard View" onclick="zoomImage(this)" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80'">
-                        <img src="images/project-ai-sub1.jpg" alt="LLM Engine Thread Execution Logs" onclick="zoomImage(this)" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80'">
-                        <img src="images/project-ai-sub2.jpg" alt="Dataset Extraction Training Pipeline Parameters" onclick="zoomImage(this)" onerror="this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=400&q=80'">
-                        <img src="images/project-ai-sub3.jpg" alt="Automated Strategic Analytics Report Layout" onclick="zoomImage(this)" onerror="this.src='https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=400&q=80'">
-                    </div>
-                    <div class="project-details">
+                    <div class="project-header">
                         <h3>AI Coaching Tools Suite</h3>
-                        <p class="project-description">Fine-tuned Large Language Models (LLMs) to extract structural components, auto-generate trend graphs, and deliver real-time recommendation matrices across massive online chat records.</p>
-                        
-                        <div class="case-study-grid">
-                            <div class="case-box problem">
-                                <h4>The Problem</h4>
-                                <p>Processing 10,000+ unorganized chat streams manually created massive resource bottlenecks and lacked instant agent tracking metrics.</p>
-                            </div>
-                            <div class="case-box solution">
-                                <h4>The Solution</h4>
-                                <p>Fine-tuned specialized models and deployed prompt guidelines to auto-parse strings, outputs live data segments safely.</p>
-                            </div>
-                            <div class="case-box impact">
-                                <h4>The Impact</h4>
-                                <p>Boosted system tracking ceilings by 90% and cut down document writing workloads by 80% with custom generation architectures.</p>
-                            </div>
+                        <a href="https://linkedin.com/in/christian-eka-wibisono" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 8px 16px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Case Study</a>
+                    </div>
+                    
+                    <p class="project-description">Fine-tuned Large Language Models (LLMs) to extract structural components, auto-generate trend graphs, and deliver real-time recommendation matrices across massive online chat records.</p>
+                    
+                    <div class="case-study-grid">
+                        <div class="case-box problem">
+                            <h4>The Problem</h4>
+                            <p>Processing 10,000+ unorganized chat streams manually created massive resource bottlenecks and lacked instant agent tracking metrics.</p>
                         </div>
+                        <div class="case-box solution">
+                            <h4>The Solution</h4>
+                            <p>Fine-tuned specialized models and deployed prompt guidelines to auto-parse strings, outputs live data segments safely.</p>
+                        </div>
+                        <div class="case-box impact">
+                            <h4>The Impact</h4>
+                            <p>Boosted system tracking ceilings by 90% and cut down document writing workloads by 80% with custom generation architectures.</p>
+                        </div>
+                    </div>
 
-                        <div class="project-tags">
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">Prompt Engineering</span>
-                            <span class="tag">Python Backend</span>
-                        </div>
-                        
-                        <a href="http://m2m.theoneway.org:9088/" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 20px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo / View Case Study</a>
+                    <div class="project-tags">
+                        <span class="tag">LLM Tuning</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Prompt Engineering</span>
+                        <span class="tag">Python Backend</span>
                     </div>
                 </div>
 
                 <div class="showcase-item">
-                    <div class="project-mosaic-gallery">
-                        <img src="images/project-laundry-main.jpg" class="img-featured-tile" alt="Multi-Kiosk Laundry Native System Architecture Overview" onclick="zoomImage(this)" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80'">
-                        <img src="images/project-laundry-sub1.jpg" alt="Application Wireframe & Database Optimization Mapping" onclick="zoomImage(this)" onerror="this.src='https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=400&q=80'">
-                        <img src="images/project-laundry-sub2.jpg" alt="Kotlin Component Activity Native Codebase Layout" onclick="zoomImage(this)" onerror="this.src='https://images.unsplash.com/photo-1541462608141-ad4979e408c9?auto=format&fit=crop&w=400&q=80'">
-                        <img src="images/project-laundry-sub3.jpg" alt="Asynchronous Financial Gateway API Integrity Tests" onclick="zoomImage(this)" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80'">
-                    </div>
-                    <div class="project-details">
+                    <div class="project-header">
                         <h3>Multi-Kiosk Laundry Native App</h3>
-                        <p class="project-description">Engineered a robust transaction-focused android mobile system handling decentralized data updates securely across multiple independent brick-and-mortar kiosks simultaneously.</p>
-                        
-                        <div class="case-study-grid">
-                            <div class="case-box problem">
-                                <h4>The Problem</h4>
-                                <p>Legacy structures struggled to balance transactions across different point-of-sale systems, generating frequent database collisions.</p>
-                            </div>
-                            <div class="case-box solution">
-                                <h4>The Solution</h4>
-                                <p>Coded core frameworks using native Kotlin and decoupled asynchronous handlers under clean, strict MVP pattern rules.</p>
-                            </div>
-                            <div class="case-box impact">
-                                <h4>The Impact</h4>
-                                <p>Eliminated transaction conflicts entirely and built production-ready multi-kiosk checkouts bound to live online financial gateways.</p>
-                            </div>
+                        <a href="https://linkedin.com/in/christian-eka-wibisono" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 8px 16px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Case Study</a>
+                    </div>
+                    
+                    <p class="project-description">Engineered a robust transaction-focused android mobile system handling decentralized data updates securely across multiple independent brick-and-mortar kiosks simultaneously.</p>
+                    
+                    <div class="case-study-grid">
+                        <div class="case-box problem">
+                            <h4>The Problem</h4>
+                            <p>Legacy structures struggled to balance transactions across different point-of-sale systems, generating frequent database collisions.</p>
                         </div>
-
-                        <div class="project-tags">
-                            <span class="tag">Kotlin Android</span>
-                            <span class="tag">MVP Pattern</span>
-                            <span class="tag">Scrum Lifecycle</span>
+                        <div class="case-box solution">
+                            <h4>The Solution</h4>
+                            <p>Coded core frameworks using native Kotlin and decoupled asynchronous handlers under clean, strict MVP pattern rules.</p>
                         </div>
+                        <div class="case-box impact">
+                            <h4>The Impact</h4>
+                            <p>Eliminated transaction conflicts entirely and built production-ready multi-kiosk checkouts bound to live online financial gateways.</p>
+                        </div>
+                    </div>
 
-                        <a href="https://londree.id/" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 20px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo / View Case Study</a>
+                    <div class="project-tags">
+                        <span class="tag">Kotlin Android</span>
+                        <span class="tag">MVP Pattern</span>
+                        <span class="tag">Gateway Integrations</span>
+                        <span class="tag">Scrum Lifecycle</span>
                     </div>
                 </div>
 
@@ -406,7 +367,7 @@
             </div>
         </section>
 
-        <section id="education" class="section">
+        <section class="section">
             <h2 class="section-title">Education & Credentials</h2>
             <div class="credentials-grid">
                 
@@ -466,21 +427,8 @@
         </section>
 
         <section id="experience" class="section">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title">Professional Timeline</h2>
             <div class="timeline-container">
-
-                <div class="timeline-row">
-                    <div class="timeline-year">2020 — Present</div>
-                    <div class="timeline-body">
-                        <h3>Resources Academy Coordinator</h3>
-                        <h4>Yayasan Lembaga SABDA (Surakarta, ID — Onsite)</h4>
-                        <ul>
-                            <li>Supervise full-scale digital broadcast architecture, media asset security parameters, and device distributions.</li>
-                            <li>Act as central internal Web Developer to execute layout upgrades, improve speed, and add modular features to enterprise portals.</li>
-                            <li>Manage production pipelines for training platforms, video content post-production, and YouTube networks.</li>
-                        </ul>
-                    </div>
-                </div>
 
                 <div class="timeline-row">
                     <div class="timeline-year">2025 — Present</div>
@@ -492,6 +440,19 @@
                             <li>Executed precise model fine-tuning processes to hit system specifications, increasing target accuracy limits by 90%.</li>
                             <li>Engineered and tested stable prompt guidelines to optimize real-time recommendation widgets for active agents.</li>
                             <li>Built an automated custom analytical report tool from scratch, reducing human report generation overhead by 80%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-row">
+                    <div class="timeline-year">2020 — Present</div>
+                    <div class="timeline-body">
+                        <h3>Resources Academy Coordinator</h3>
+                        <h4>Yayasan Lembaga SABDA (Surakarta, ID — Onsite)</h4>
+                        <ul>
+                            <li>Supervise full-scale digital broadcast architecture, media asset security parameters, and device distributions.</li>
+                            <li>Act as central internal Web Developer to execute layout upgrades, improve speed, and add modular features to enterprise portals.</li>
+                            <li>Manage production pipelines for training platforms, video content post-production, and YouTube networks.</li>
                         </ul>
                     </div>
                 </div>
@@ -556,29 +517,29 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-brand">
-                <a href="#home" class="logo">Christian<span> Eka</span></a>
+                <a href="#home" class="logo">Christian<span>.Dev</span></a>
                 <p>Engineering stable data-driven AI systems and high-throughput digital media production structures for international operations.</p>
             </div>
             <div class="footer-links">
                 <h4>Navigation</h4>
                 <ul>
+                    <li><a href="#home">Home Base</a></li>
                     <li><a href="#projects">Selected Projects</a></li>
                     <li><a href="#skills">Technical Skills</a></li>
-                    <li><a href="#education">Education & Credentials</a></li>
-                    <li><a href="#experience">Professional Experience</a></li>
+                    <li><a href="#experience">Work Timeline</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
                 <h4>Global Gateway</h4>
-                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:ekachristian01@gmail.com">ekachristian01@gmail.com</a></p>
+                <p><i class="fa-solid fa-envelope"></i> ekachristian01@gmail.com</p>
                 <p><i class="fa-solid fa-location-dot"></i> Central Java, Indonesia</p>
                 <a href="https://linkedin.com/in/christian-eka-wibisono" target="_blank" class="footer-social-link">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+                    <i class="fa-brands fa-linkedin"></i> Verified LinkedIn Profile
                 </a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Christian Eka. Crafted with vanilla semantic HTML5 & CSS Grid modules.</p>
+            <p>&copy; 2026 Christian Eka Wibisono. Crafted with vanilla semantic HTML5 & CSS Grid modules.</p>
         </div>
     </footer>
 
@@ -592,10 +553,6 @@
         <button class="btn-float btn-top" id="scrollTopBtn" onclick="scrollToTop()" title="Scroll to Top">
             <i class="fa-solid fa-arrow-up"></i>
         </button>
-    </div>
-
-    <div class="lightbox" id="lightbox" onclick="this.style.display='none'">
-        <img id="lightbox-img" src="" alt="Expanded view">
     </div>
 
     <script>
@@ -625,14 +582,6 @@
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // POPUP MODAL LIGHTBOX CONTROL
-        function zoomImage(imgElement) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = imgElement.src;
-            lightbox.style.display = 'flex';
         }
     </script>
 </body>
